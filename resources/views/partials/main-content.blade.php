@@ -15,8 +15,11 @@
                 </p>
                 <p align="justify">This conference provides a venue for scholarly collaboration and knowledge exchange in the fields of digital economy, smart business, innovation management, data-driven decision-making, and emerging technologies.</p>
                 <p align="justify">Accepted and presented papers will be published in the Springer Proceedings in Business and Economics (SPBE) and submitted for indexing in Scopus and Web of Science (subject to Springer's indexing policy).</p>
+                <p class="alert-info">| Conference Objectives:
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DESDI’25 seeks to:
+                </p>
                 <p align="justify">
-                    <strong>Conference Objectives:</strong><br>
+                    
                     • Promote interdisciplinary research bridging business, economics, and applied technology<br>
                     • Explore the impact of data-driven innovation on digital transformation and competitiveness<br>
                     • Highlight real-world applications of AI, analytics, and smart technologies in business ecosystems<br>

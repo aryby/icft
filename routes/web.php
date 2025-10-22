@@ -22,6 +22,7 @@ Route::get('/call-for-papers', [CallForPapersController::class, 'index'])->name(
 Route::get('/committee', [CommitteeController::class, 'index'])->name('committee');
 Route::get('/submission', [SubmissionController::class, 'index'])->name('submission');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::view('/program', 'program')->name('program'); // Static view for program page :::
 
 // New navbar pages (placeholders for now)
 Route::view('/committees', 'committees')->name('committees');
@@ -29,7 +30,6 @@ Route::view('/speakers', 'speakers')->name('speakers');
 Route::view('/calls', 'calls')->name('calls');
 Route::view('/registration', 'registration')->name('registration');
 Route::view('/publication', 'publication')->name('publication');
-Route::view('/program', 'program')->name('program');
 Route::view('/dates-news', 'dates-news')->name('dates-news');
 Route::view('/attendees', 'attendees')->name('attendees');
 Route::view('/history', 'history')->name('history');

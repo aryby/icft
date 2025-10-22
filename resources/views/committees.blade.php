@@ -1,14 +1,33 @@
 @extends('layouts.app')
 
-@section('title', 'Committees - ICFT 2025')
+@section('title', 'Committees - DESDI 2025')
 
 @section('content')
-<section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Committees</h1>
-        <p class="text-gray-600">This is a placeholder page for Committees. Content coming soon.</p>
+<div class="row-fluid">
+    <div class="span12">
+        <div class="titleborder">
+            <div>Conference Committees</div>
+        </div>
+        <div class="text-center">
+            <p class="lead">
+                Meet the distinguished committee members of DESDI 2025
+            </p>
+        </div>
     </div>
-</section>
+</div>
+
+<div class="row-fluid">
+    <div class="span12">
+        <div class="well text-center">
+            <h3>Committee Information</h3>
+            <p>
+                Detailed information about all conference committees is available on our 
+                <a href="{{ route('committee') }}">Committee page</a>.
+            </p>
+            <p>
+                For committee-related inquiries, please contact us at <strong>desdi25@desdi.org</strong>
+            </p>
+        </div>
+    </div>
+</div>
 @endsection
-
-

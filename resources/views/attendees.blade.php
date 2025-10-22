@@ -1,19 +1,41 @@
 @extends('layouts.app')
 
-@section('title', 'Attendees - ICFT 2025')
+@section('title', 'Attendees - DESDI 2025')
 
 @section('content')
-<section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Attendees</h1>
-        <ul class="list-disc pl-6 text-gray-700 space-y-2">
-            <li>Venue</li>
-            <li>Visa</li>
-            <li>About the City</li>
-            <li>Code of Conduct</li>
-        </ul>
+<div class="row-fluid">
+    <div class="span12">
+        <div class="titleborder">
+            <div>Information for Attendees</div>
+        </div>
+        <div class="text-center">
+            <p class="lead">
+                Important information for DESDI 2025 attendees
+            </p>
+        </div>
     </div>
-</section>
+</div>
+
+<div class="row-fluid">
+    <div class="span12">
+        <div class="well">
+            <h3>Conference Information</h3>
+            <ul>
+                <li><strong>Venue:</strong> Morocco</li>
+                <li><strong>Dates:</strong> October 23-24, 2025</li>
+                <li><strong>Format:</strong> In-person with virtual components</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row-fluid">
+    <div class="span12">
+        <div class="well">
+            <h3>Travel Information</h3>
+            <p>Detailed travel and accommodation information will be provided closer to the conference date.</p>
+            <p>For specific inquiries, please contact us at <strong>desdi25@desdi.org</strong></p>
+        </div>
+    </div>
+</div>
 @endsection
-
-

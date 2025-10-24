@@ -182,3 +182,4 @@ This document summarizes the cleanup and migration of the conference website fro
 - No Tailwind dependencies remain
 - All non-functional elements removed
 - Content updated to reflect DESDI 2025 conference
+

@@ -12,7 +12,9 @@
     font-size: 1.1em;
     margin-bottom: 30px;
 }
-
+.uli {
+    list-style: inside;
+}
 /* Track cards styling */
 .track-card {
     background: #f8f9fa;

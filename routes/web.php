@@ -19,6 +19,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 // Existing pages
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/call-for-papers', [CallForPapersController::class, 'index'])->name('call-for-papers');
+Route::view('/author-instructions', 'author-instructions')->name('author-instructions');
+Route::view('/important-dates', 'important-dates')->name('important-dates');
 Route::get('/committee', [CommitteeController::class, 'index'])->name('committee');
 Route::get('/submission', [SubmissionController::class, 'index'])->name('submission');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');

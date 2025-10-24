@@ -7,6 +7,7 @@ use App\Http\Controllers\CallForPapersController;
 use App\Http\Controllers\CommitteeController;
 use App\Http\Controllers\SubmissionController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\PaperController as AdminPaperController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
@@ -36,8 +37,25 @@ Route::view('/dates-news', 'dates-news')->name('dates-news');
 Route::view('/attendees', 'attendees')->name('attendees');
 Route::view('/history', 'history')->name('history');
 
-// Admin Area (similar structure to ijimds)
-Route::prefix('admin')->name('admin.')->group(function () {
+// Authentication Routes
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+// Registration Routes
+Route::get('/registration', [App\Http\Controllers\RegistrationController::class, 'index'])->name('registration');
+Route::post('/registration', [App\Http\Controllers\RegistrationController::class, 'store'])->name('registration.store');
+
+// Author Dashboard Routes (protected by authentication)
+Route::prefix('author')->name('author.')->middleware('auth')->group(function () {
+    Route::get('/dashboard', [App\Http\Controllers\AuthorDashboardController::class, 'index'])->name('dashboard');
+    Route::get('/papers/create', [App\Http\Controllers\AuthorDashboardController::class, 'createPaper'])->name('papers.create');
+    Route::post('/papers', [App\Http\Controllers\AuthorDashboardController::class, 'storePaper'])->name('papers.store');
+    Route::get('/papers/{paper}', [App\Http\Controllers\AuthorDashboardController::class, 'showPaper'])->name('papers.show');
+});
+
+// Admin Area (protected by authentication middleware)
+Route::prefix('admin')->name('admin.')->middleware('admin.auth')->group(function () {
     Route::get('/', [AdminDashboardController::class, 'index'])->name('dashboard');
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard.index');
 
@@ -58,4 +76,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/users/{id}/edit', [AdminUserController::class, 'edit'])->name('users.edit');
     Route::put('/users/{id}', [AdminUserController::class, 'update'])->name('users.update');
     Route::delete('/users/{id}', [AdminUserController::class, 'destroy'])->name('users.destroy');
+
+    // Registrations
+    Route::get('/registrations', [App\Http\Controllers\Admin\RegistrationController::class, 'index'])->name('registrations.index');
+    Route::get('/registrations/{registration}', [App\Http\Controllers\Admin\RegistrationController::class, 'show'])->name('registrations.show');
+    Route::post('/registrations/{registration}/verify', [App\Http\Controllers\Admin\RegistrationController::class, 'verify'])->name('registrations.verify');
 });

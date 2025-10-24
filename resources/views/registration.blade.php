@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Registration - DESDI 2025')
-@section('description', 'Register for DESDI 2025 - International Conference on Digital Economy Smart Business & Data Innovation. Early registration available until October 1st, 2025.')
+@section('title', 'Registration - ICFT 2025')
+@section('description', 'Register for ICFT 2025 - International Conference on Digital Economy Smart Business & Data Innovation. Early registration available until October 1st, 2025.')
 
 @section('content')
 <!-- Page Header -->
@@ -130,32 +130,44 @@
 
 <div class="row-fluid">
     <div class="span12">
-        <form class="form-horizontal">
+        <form class="form-horizontal" method="POST" action="{{ route('registration.store') }}" enctype="multipart/form-data">
+            @csrf
+            
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <h4>Please correct the following errors:</h4>
+                    <ul class="mb-0">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="control-group">
                 <label class="control-label" for="fullName">Full Name *</label>
                 <div class="controls">
-                    <input type="text" id="fullName" name="fullName" class="input-xlarge" required>
+                    <input type="text" id="fullName" name="fullName" class="input-xlarge" value="{{ old('fullName') }}" required>
                 </div>
             </div>
             
             <div class="control-group">
                 <label class="control-label" for="email">Email Address *</label>
                 <div class="controls">
-                    <input type="email" id="email" name="email" class="input-xlarge" required>
+                    <input type="email" id="email" name="email" class="input-xlarge" value="{{ old('email') }}" required>
                 </div>
             </div>
             
             <div class="control-group">
                 <label class="control-label" for="affiliation">Institution/Affiliation *</label>
                 <div class="controls">
-                    <input type="text" id="affiliation" name="affiliation" class="input-xlarge" required>
+                    <input type="text" id="affiliation" name="affiliation" class="input-xlarge" value="{{ old('affiliation') }}" required>
                 </div>
             </div>
             
             <div class="control-group">
                 <label class="control-label" for="country">Country *</label>
                 <div class="controls">
-                    <input type="text" id="country" name="country" class="input-xlarge" required>
+                    <input type="text" id="country" name="country" class="input-xlarge" value="{{ old('country') }}" required>
                 </div>
             </div>
             
@@ -164,15 +176,23 @@
                 <div class="controls">
                     <select id="registrationType" name="registrationType" class="input-xlarge" required>
                         <option value="">Select Registration Type</option>
-                        <option value="student">Student paper registration</option>
-                        <option value="professional">Professional / Researcher paper registration</option>
-                        <option value="extra">Extra Paper registration</option>
-                        <option value="abstract">Abstract registration</option>
-                        <option value="attending">Authors Attending registration</option>
+                        <option value="student" {{ old('registrationType') == 'student' ? 'selected' : '' }}>Student paper registration</option>
+                        <option value="professional" {{ old('registrationType') == 'professional' ? 'selected' : '' }}>Professional / Researcher paper registration</option>
+                        <option value="extra" {{ old('registrationType') == 'extra' ? 'selected' : '' }}>Extra Paper registration</option>
+                        <option value="abstract" {{ old('registrationType') == 'abstract' ? 'selected' : '' }}>Abstract registration</option>
+                        <option value="attending" {{ old('registrationType') == 'attending' ? 'selected' : '' }}>Authors Attending registration</option>
                     </select>
                 </div>
             </div>
             
+            <div class="control-group">
+                <label class="control-label" for="recept_payment"> Recept payment
+                </label>
+                <div class="controls">
+                    <input type="text" id="recept_payment" name="recept_payment" class="input-xlarge" value="{{ old('recept_payment') }}">
+                </div>
+            </div>
+
             <div class="control-group">
                 <label class="control-label" for="paperId">Paper ID (if applicable)</label>
                 <div class="controls">
@@ -183,7 +203,7 @@
             <div class="control-group">
                 <label class="control-label" for="dietary">Dietary Requirements</label>
                 <div class="controls">
-                    <textarea id="dietary" name="dietary" class="input-xlarge" rows="3"></textarea>
+                    <textarea id="dietary" name="dietary" class="input-xlarge" rows="3">{{ old('dietary') }}</textarea>
                 </div>
             </div>
             

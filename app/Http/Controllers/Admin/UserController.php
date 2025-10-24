@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -12,7 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('admin.users.index');
+        $users = User::latest()->paginate(10);
+        return view('admin.users.index', compact('users'));
     }
 
     /**
@@ -28,38 +31,72 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        // Implementation for storing users
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8|confirmed',
+        ]);
+
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+
+        return redirect()->route('admin.users.index')
+            ->with('success', 'User created successfully.');
     }
 
     /**
      * Display the specified user.
      */
-    public function show($id)
+    public function show(User $user)
     {
-        return view('admin.users.show', compact('id'));
+        return view('admin.users.show', compact('user'));
     }
 
     /**
      * Show the form for editing the specified user.
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        return view('admin.users.edit', compact('id'));
+        return view('admin.users.edit', compact('user'));
     }
 
     /**
      * Update the specified user.
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        // Implementation for updating users
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users,email,' . $user->id,
+            'password' => 'nullable|string|min:8|confirmed',
+        ]);
+
+        $data = [
+            'name' => $request->name,
+            'email' => $request->email,
+        ];
+
+        if ($request->filled('password')) {
+            $data['password'] = Hash::make($request->password);
+        }
+
+        $user->update($data);
+
+        return redirect()->route('admin.users.index')
+            ->with('success', 'User updated successfully.');
     }
 
     /**
      * Remove the specified user.
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        // Implementation for deleting users
+        $user->delete();
+
+        return redirect()->route('admin.users.index')
+            ->with('success', 'User deleted successfully.');
     }
 }

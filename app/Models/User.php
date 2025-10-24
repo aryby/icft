@@ -45,4 +45,19 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function registration()
+    {
+        return $this->hasOne(Registration::class);
+    }
+
+    public function papers()
+    {
+        return $this->hasMany(Paper::class);
+    }
+
+    public function hasVerifiedRegistration(): bool
+    {
+        return $this->registration && $this->registration->isVerified();
+    }
 }

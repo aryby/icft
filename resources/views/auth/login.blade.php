@@ -1,48 +1,96 @@
-@extends('layouts.app')
-
-@section('title', 'Login - ICFT 2025')
-
-@section('content')
-<div class="min-h-screen bg-gray-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-md w-full space-y-8">
-        <div>
-            <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-                Sign in to your account
-            </h2>
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Login - ICFT 2025 Admin</title>
+    <link href="{{ asset('inspire.css') }}" rel="stylesheet">
+    <link href="{{ asset('desdi-custom.css') }}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .login-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 2rem;
+            max-width: 400px;
+            width: 100%;
+        }
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .login-logo {
+            width: 60px;
+            height: 60px;
+            background: #007bff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="d-flex align-items-center justify-content-center min-vh-100">
+    <div class="login-card">
+        <div class="login-header">
+            <div class="login-logo">IC</div>
+            <h2 class="h4 mb-2">Sign in to admin panel</h2>
+            <p class="text-muted">ICFT 2025 Conference Management</p>
         </div>
-        <form class="mt-8 space-y-6" action="#" method="POST">
-            <div class="rounded-md shadow-sm -space-y-px">
-                <div>
-                    <label for="email-address" class="sr-only">Email address</label>
-                    <input id="email-address" name="email" type="email" autocomplete="email" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
+        
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
+            
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul class="mb-0">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
                 </div>
-                <div>
-                    <label for="password" class="sr-only">Password</label>
-                    <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
-                </div>
+            @endif
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input id="email" name="email" type="email" class="form-control @error('email') is-invalid @enderror" 
+                       placeholder="Enter your email" value="{{ old('email') }}" required>
+                @error('email')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
             </div>
 
-            <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                    <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                    <label for="remember-me" class="ml-2 block text-sm text-gray-900">
-                        Remember me
-                    </label>
-                </div>
-
-                <div class="text-sm">
-                    <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-                        Forgot your password?
-                    </a>
-                </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input id="password" name="password" type="password" class="form-control @error('password') is-invalid @enderror" 
+                       placeholder="Enter your password" required>
+                @error('password')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
             </div>
 
-            <div>
-                <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    Sign in
+            <div class="mb-3 form-check">
+                <input id="remember" name="remember" type="checkbox" class="form-check-input">
+                <label for="remember" class="form-check-label">Remember me</label>
+            </div>
+
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-sign-in-alt me-2"></i>Sign in
                 </button>
             </div>
         </form>
     </div>
-</div>
-@endsection
+</body>
+</html>

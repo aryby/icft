@@ -28,20 +28,17 @@ class AuthorDashboardController extends Controller
 
     public function showPaper(Paper $paper)
     {
-        // Ensure the paper belongs to the authenticated user
-        if ($paper->user_id !== Auth::id()) {
-            abort(403, 'Unauthorized access to paper.');
-        }
+        $paper = Paper::with('reviews.reviewer')->findOrFail($paper->id);
 
         return view('author.papers.show', compact('paper'));
     }
 
     public function createPaper()
     {
-        // Check if user has verified registration
-        if (!Auth::user()->hasVerifiedRegistration()) {
+        // Check if user account is active
+        if (!Auth::user()->isActive()) {
             return redirect()->route('author.dashboard')
-                ->with('error', 'You must have a verified registration to submit papers.');
+                ->with('error', 'Your account is not active. You cannot submit papers until it is activated by an administrator.');
         }
 
         return view('author.papers.create');
@@ -49,18 +46,17 @@ class AuthorDashboardController extends Controller
 
     public function storePaper(Request $request)
     {
-        // Check if user has verified registration
-        if (!Auth::user()->hasVerifiedRegistration()) {
+        // Check if user account is active
+        if (!Auth::user()->isActive()) {
             return redirect()->route('author.dashboard')
-                ->with('error', 'You must have a verified registration to submit papers.');
+                ->with('error', 'Your account is not active. You cannot submit papers until it is activated by an administrator.');
         }
 
         $request->validate([
             'title' => 'required|string|max:255',
-            'author_name' => 'required|string|max:255',
-            'author_email' => 'required|email|max:255',
             'abstract' => 'required|string',
             'keywords' => 'required|string',
+            'track' => 'required|string|max:255',
             'paper_file' => 'required|file|mimes:pdf|max:10240', // 10MB max
         ]);
 
@@ -71,17 +67,23 @@ class AuthorDashboardController extends Controller
         }
 
         Paper::create([
-            'user_id' => Auth::id(),
+            'author_id' => Auth::id(),
             'title' => $request->title,
-            'author_name' => $request->author_name,
-            'author_email' => $request->author_email,
             'abstract' => $request->abstract,
             'keywords' => $request->keywords,
+            'track' => $request->track,
             'status' => 'under_review', // Default status
-            'paper_file' => $paperPath,
+            'file_path' => $paperPath,
+            'submitted_at' => now(),
         ]);
 
         return redirect()->route('author.dashboard')
             ->with('success', 'Paper submitted successfully! It is now under review.');
+    }
+
+    public function indexPapers()
+    {
+        $papers = Auth::user()->papers()->latest()->get();
+        return view('author.papers.index', compact('papers'));
     }
 }

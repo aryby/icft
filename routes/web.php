@@ -50,6 +50,7 @@ Route::post('/registration', [App\Http\Controllers\RegistrationController::class
 Route::prefix('author')->name('author.')->middleware('auth')->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\AuthorDashboardController::class, 'index'])->name('dashboard');
     Route::get('/papers/create', [App\Http\Controllers\AuthorDashboardController::class, 'createPaper'])->name('papers.create');
+    Route::get('/papers', [App\Http\Controllers\AuthorDashboardController::class, 'indexPapers'])->name('papers.index');
     Route::post('/papers', [App\Http\Controllers\AuthorDashboardController::class, 'storePaper'])->name('papers.store');
     Route::get('/papers/{paper}', [App\Http\Controllers\AuthorDashboardController::class, 'showPaper'])->name('papers.show');
 });
@@ -63,10 +64,10 @@ Route::prefix('admin')->name('admin.')->middleware('admin.auth')->group(function
     Route::get('/papers', [AdminPaperController::class, 'index'])->name('papers.index');
     Route::get('/papers/create', [AdminPaperController::class, 'create'])->name('papers.create');
     Route::post('/papers', [AdminPaperController::class, 'store'])->name('papers.store');
-    Route::get('/papers/{id}', [AdminPaperController::class, 'show'])->name('papers.show');
-    Route::get('/papers/{id}/edit', [AdminPaperController::class, 'edit'])->name('papers.edit');
-    Route::put('/papers/{id}', [AdminPaperController::class, 'update'])->name('papers.update');
-    Route::delete('/papers/{id}', [AdminPaperController::class, 'destroy'])->name('papers.destroy');
+    Route::get('/papers/{paper}', [AdminPaperController::class, 'show'])->name('papers.show');
+    Route::get('/papers/{paper}/edit', [AdminPaperController::class, 'edit'])->name('papers.edit');
+    Route::put('/papers/{paper}', [AdminPaperController::class, 'update'])->name('papers.update');
+    Route::delete('/papers/{paper}', [AdminPaperController::class, 'destroy'])->name('papers.destroy');
 
     // Users
     Route::get('/users', [AdminUserController::class, 'index'])->name('users.index');
@@ -81,4 +82,7 @@ Route::prefix('admin')->name('admin.')->middleware('admin.auth')->group(function
     Route::get('/registrations', [App\Http\Controllers\Admin\RegistrationController::class, 'index'])->name('registrations.index');
     Route::get('/registrations/{registration}', [App\Http\Controllers\Admin\RegistrationController::class, 'show'])->name('registrations.show');
     Route::post('/registrations/{registration}/verify', [App\Http\Controllers\Admin\RegistrationController::class, 'verify'])->name('registrations.verify');
+
+    // Reviews
+    Route::post('/papers/{paper}/reviews', [App\Http\Controllers\Admin\ReviewController::class, 'store'])->name('reviews.store');
 });

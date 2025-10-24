@@ -7,9 +7,7 @@
 <div class="table-card">
     <div class="table-header">
         <h5 class="mb-0">All Papers</h5>
-        <a href="{{ route('admin.papers.create') }}" class="btn btn-primary">
-            <i class="fas fa-plus me-1"></i>New Paper
-        </a>
+        
     </div>
     
     @if(session('success'))
@@ -75,10 +73,7 @@
             <div class="text-center p-5">
                 <i class="fas fa-file-alt fa-3x text-muted mb-3"></i>
                 <h5 class="text-muted">No papers yet</h5>
-                <p class="text-muted mb-3">Get started by creating a new paper.</p>
-                <a href="{{ route('admin.papers.create') }}" class="btn btn-primary">
-                    <i class="fas fa-plus me-1"></i>Create Paper
-                </a>
+               
             </div>
         @endif
     </div>

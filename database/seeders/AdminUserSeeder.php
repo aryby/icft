@@ -19,6 +19,8 @@ class AdminUserSeeder extends Seeder
             'email' => 'admin@icft2025.com',
             'password' => Hash::make('password'),
             'email_verified_at' => now(),
+            'role' => 'admin',
+            'status' => 'active',
         ]);
     }
 }

@@ -16,7 +16,12 @@ class LoginController extends Controller
     public function showLoginForm()
     {
         if (Auth::check()) {
-            return redirect()->route('admin.dashboard');
+            if (Auth::user()->isAdmin()) {
+                return redirect()->route('admin.dashboard');
+            } else if (Auth::user()->isAuthor()) {
+                return redirect()->route('author.dashboard');
+            }
+            return redirect()->route('home'); // Default redirect for other roles
         }
         return view('auth.login');
     }
@@ -37,7 +42,12 @@ class LoginController extends Controller
         if (Auth::attempt($credentials, $remember)) {
             $request->session()->regenerate();
             
-            return redirect()->intended(route('admin.dashboard'));
+            if (Auth::user()->type === 'admin') {
+                return redirect()->intended(route('admin.dashboard'));
+            } else if (Auth::user()->type === 'author') {
+                return redirect()->intended(route('author.dashboard'));
+            }
+            return redirect()->intended(route('home')); // Default redirect for other types
         }
 
         throw ValidationException::withMessages([

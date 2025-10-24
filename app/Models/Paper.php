@@ -10,17 +10,16 @@ class Paper extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id',
+        'author_id',
         'title',
-        'author_name',
-        'author_email',
         'abstract',
         'keywords',
         'status',
-        'paper_file',
+        'file_path',
         'submitted_at',
         'reviewed_at',
         'accepted_at',
+        'track',
     ];
 
     protected $casts = [
@@ -32,9 +31,17 @@ class Paper extends Model
     /**
      * Get the user that owns the paper.
      */
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'author_id');
+    }
+
+    /**
+     * Get the user that owns the paper.
+     */
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->author();
     }
 
     /**

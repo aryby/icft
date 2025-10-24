@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Registration;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class RegistrationController extends Controller
 {
@@ -41,9 +45,31 @@ class RegistrationController extends Controller
         // Calculate registration fee based on type and early/late registration
         $fee = $this->calculateRegistrationFee($registrationType);
         
+        // Check if user is authenticated
+        $userId = Auth::id();
+
+        if (!$userId) {
+            // User is not logged in, create a new account
+            $password = Str::random(10);
+            $user = User::create([
+                'name' => $request->fullName,
+                'email' => $request->email,
+                'password' => Hash::make($password),
+                'role' => 'author', // Assign a default role, e.g., 'author'
+                'status' => 'pending',
+            ]);
+
+            // Send email with password (you'll need to set up mail configuration)
+            // Mail::to($user->email)->send(new NewUserRegistrationMail($password));
+
+            // Log in the newly created user
+            Auth::login($user);
+            $userId = $user->id;
+        }
+        
         // Create registration
         $registration = Registration::create([
-            'user_id' => Auth::id(),
+            'user_id' => $userId,
             'registration_type' => $registrationType,
             'full_name' => $request->fullName,
             'email' => $request->email,

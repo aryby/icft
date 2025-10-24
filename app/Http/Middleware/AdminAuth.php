@@ -20,9 +20,9 @@ class AdminAuth
             return redirect()->route('login')->with('error', 'Please login to access the admin panel.');
         }
 
-        // You can add additional admin role checks here if needed
-        // For example: if (!Auth::user()->is_admin) { ... }
-
+        if (!Auth::user()->isAdmin()) {
+            return redirect()->route('home')->with('error', 'You do not have admin access.');
+        }
         return $next($request);
     }
 }

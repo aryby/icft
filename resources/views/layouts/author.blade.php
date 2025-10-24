@@ -110,6 +110,25 @@
     </style>
 </head>
 <body>
+    @if(Auth::check() && Auth::user()->status === 'pending')
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="pendingAccountToast" class="toast align-items-center text-white bg-warning border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        Your account is currently under review. You will be notified once it's activated.
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var toastLiveExample = document.getElementById('pendingAccountToast')
+                var toast = new bootstrap.Toast(toastLiveExample)
+                toast.show()
+            });
+        </script>
+    @endif
     <div class="d-flex">
         <!-- Sidebar -->
         <aside class="author-sidebar">
@@ -128,9 +147,7 @@
                 <a href="{{ route('author.papers.index') }}" class="{{ request()->routeIs('author.papers.index*') ? 'active' : '' }}">
                     <i class="fas fa-file-alt me-2"></i>My Papers
                 </a>
-                <a href="{{ route('registration') }}" class="{{ request()->routeIs('registration*') ? 'active' : '' }}">
-                    <i class="fas fa-user-plus me-2"></i>Registration
-                </a>
+
             </nav>
         </aside>
 

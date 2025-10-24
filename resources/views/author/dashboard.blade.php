@@ -19,47 +19,7 @@
 @endif
 
 <!-- Registration Status -->
-@if($registration)
-    <div class="table-card mb-4">
-        <div class="table-header">
-            <h5 class="mb-0">Registration Status</h5>
-            <span class="status-badge status-{{ $registration->payment_status }}">
-                {{ ucfirst(str_replace('_', ' ', $registration->payment_status)) }}
-            </span>
-        </div>
-        <div class="p-3">
-            <div class="row">
-                <div class="col-md-6">
-                    <p><strong>Registration Type:</strong> {{ ucfirst($registration->registration_type) }}</p>
-                    <p><strong>Full Name:</strong> {{ $registration->full_name }}</p>
-                    <p><strong>Email:</strong> {{ $registration->email }}</p>
-                    <p><strong>Affiliation:</strong> {{ $registration->affiliation }}</p>
-                </div>
-                <div class="col-md-6">
-                    <p><strong>Country:</strong> {{ $registration->country }}</p>
-                    <p><strong>Registration Fee:</strong> ${{ $registration->registration_fee }} {{ $registration->currency }}</p>
-                    <p><strong>Payment Method:</strong> {{ ucfirst(str_replace('_', ' ', $registration->payment_method)) }}</p>
-                    <p><strong>Transaction ID:</strong> {{ $registration->transaction_id }}</p>
-                </div>
-            </div>
-            @if($registration->payment_notes)
-                <div class="mt-3">
-                    <strong>Payment Notes:</strong>
-                    <p class="text-muted">{{ $registration->payment_notes }}</p>
-                </div>
-            @endif
-        </div>
-    </div>
-@else
-    <div class="alert alert-warning" role="alert">
-        <h5 class="alert-heading">Registration Required</h5>
-        <p>You need to complete your registration before you can submit papers.</p>
-        <hr>
-        <a href="{{ route('registration') }}" class="btn btn-warning">
-            <i class="fas fa-user-plus me-1"></i>Complete Registration
-        </a>
-    </div>
-@endif
+
 
 <!-- Statistics -->
 <div class="row mb-4">
@@ -90,18 +50,13 @@
 </div>
 
 <!-- Recent Papers -->
+@if(Auth::user()->isActive())
 <div class="table-card">
     <div class="table-header">
         <h5 class="mb-0">My Papers</h5>
-        @if($registration && $registration->isVerified())
-            <a href="{{ route('author.papers.create') }}" class="btn btn-primary">
-                <i class="fas fa-plus me-1"></i>Submit New Paper
-            </a>
-        @else
-            <button class="btn btn-secondary" disabled>
-                <i class="fas fa-lock me-1"></i>Registration Required
-            </button>
-        @endif
+        <a href="{{ route('author.papers.create') }}" class="btn btn-primary">
+            <i class="fas fa-plus me-1"></i>Submit New Paper
+        </a>
     </div>
     
     @if($papers->count() > 0)
@@ -145,34 +100,23 @@
             <i class="fas fa-file-alt fa-3x text-muted mb-3"></i>
             <h5 class="text-muted">No papers submitted yet</h5>
             <p class="text-muted mb-3">
-                @if($registration && $registration->isVerified())
-                    Submit your first paper to get started.
-                @else
-                    Complete your registration to submit papers.
-                @endif
+                Submit your first paper to get started.
             </p>
-            @if($registration && $registration->isVerified())
-                <a href="{{ route('author.papers.create') }}" class="btn btn-primary">
-                    <i class="fas fa-plus me-1"></i>Submit Paper
-                </a>
-            @else
-                <a href="{{ route('registration') }}" class="btn btn-warning">
-                    <i class="fas fa-user-plus me-1"></i>Complete Registration
-                </a>
-            @endif
+            <a href="{{ route('author.papers.create') }}" class="btn btn-primary">
+                <i class="fas fa-plus me-1"></i>Submit Paper
+            </a>
         </div>
     @endif
 </div>
 
 <!-- Quick Actions -->
-@if($registration && $registration->isVerified())
     <div class="table-card">
         <div class="table-header">
             <h5 class="mb-0">Quick Actions</h5>
         </div>
         <div class="p-3">
             <div class="row">
-                <div class="col-md-4 mb-3">
+                <div class="col-md-6 mb-3">
                     <a href="{{ route('author.papers.create') }}" class="btn btn-outline-primary w-100 h-100 d-flex flex-column align-items-center justify-content-center p-4 text-decoration-none">
                         <i class="fas fa-plus-circle fa-2x mb-2"></i>
                         <div class="fw-bold">Submit Paper</div>
@@ -180,23 +124,20 @@
                     </a>
                 </div>
                 
-                <div class="col-md-4 mb-3">
+                <div class="col-md-6 mb-3">
                     <a href="{{ route('author.papers.index') }}" class="btn btn-outline-info w-100 h-100 d-flex flex-column align-items-center justify-content-center p-4 text-decoration-none">
                         <i class="fas fa-file-alt fa-2x mb-2"></i>
                         <div class="fw-bold">My Papers</div>
                         <small class="text-muted">View all your papers</small>
                     </a>
                 </div>
-                
-                <div class="col-md-4 mb-3">
-                    <a href="{{ route('registration') }}" class="btn btn-outline-success w-100 h-100 d-flex flex-column align-items-center justify-content-center p-4 text-decoration-none">
-                        <i class="fas fa-user-check fa-2x mb-2"></i>
-                        <div class="fw-bold">Registration</div>
-                        <small class="text-muted">View registration details</small>
-                    </a>
-                </div>
             </div>
         </div>
+    </div>
+@else
+    <div class="alert alert-info" role="alert">
+        <h5 class="alert-heading">Account Under Review</h5>
+        <p>Your account is currently under review. You will be able to submit papers and access full author features once your account is activated by an administrator.</p>
     </div>
 @endif
 @endsection

@@ -21,6 +21,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'status',
+        'role',
     ];
 
     /**
@@ -53,11 +55,26 @@ class User extends Authenticatable
 
     public function papers()
     {
-        return $this->hasMany(Paper::class);
+        return $this->hasMany(Paper::class, 'author_id');
     }
 
     public function hasVerifiedRegistration(): bool
     {
         return $this->registration && $this->registration->isVerified();
+    }
+
+    public function isActive(): bool
+    {
+        return $this->status === 'active';
+    }
+
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
+    }
+
+    public function isAuthor(): bool
+    {
+        return $this->role === 'author';
     }
 }

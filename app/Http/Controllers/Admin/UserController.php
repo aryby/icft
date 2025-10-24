@@ -35,12 +35,16 @@ class UserController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
+            'status' => 'required|in:pending,active,suspended',
+            'role' => 'required|in:admin,author,reviewer',
         ]);
 
         User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'status' => $request->status,
+            'role' => $request->role,
         ]);
 
         return redirect()->route('admin.users.index')
@@ -58,25 +62,30 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified user.
      */
-    public function edit(User $user)
+    public function edit($id)
     {
+        $user = User::findOrFail($id);
         return view('admin.users.edit', compact('user'));
     }
 
     /**
      * Update the specified user.
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, $id)
     {
-        $request->validate([
+        $user = User::findOrFail($id);        $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users,email,' . $user->id,
             'password' => 'nullable|string|min:8|confirmed',
+            'status' => 'required|in:pending,active,suspended',
+            'role' => 'required|in:admin,author,reviewer',
         ]);
 
         $data = [
             'name' => $request->name,
             'email' => $request->email,
+            'status' => $request->status,
+            'role' => $request->role,
         ];
 
         if ($request->filled('password')) {

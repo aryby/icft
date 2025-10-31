@@ -38,7 +38,6 @@
                                         class="caret"></b></a>
                                 <ul class="dropdown-menu js-activated" style="display: none;">
                                     <li><a href="{{ route('call-for-papers') }}">Call for Papers</a></li>
-                                    <li><a href="topics-ss.html">Special Sessions</a></li>
                                     {{-- create page public for author instruction --}}
                                     <li><a href="{{ route('author-instructions') }}">Author Instructions</a></li>
                                 </ul>

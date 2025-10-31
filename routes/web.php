@@ -24,6 +24,7 @@ Route::view('/author-instructions', 'author-instructions')->name('author-instruc
 Route::view('/important-dates', 'important-dates')->name('important-dates');
 Route::get('/committee', [CommitteeController::class, 'index'])->name('committee');
 Route::get('/submission', [SubmissionController::class, 'index'])->name('submission');
+Route::post('/submission', [SubmissionController::class, 'store'])->name('submission.store');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::view('/program', 'program')->name('program'); // Static view for program page :::
 
@@ -81,7 +82,8 @@ Route::prefix('admin')->name('admin.')->middleware('admin.auth')->group(function
     // Registrations
     Route::get('/registrations', [App\Http\Controllers\Admin\RegistrationController::class, 'index'])->name('registrations.index');
     Route::get('/registrations/{registration}', [App\Http\Controllers\Admin\RegistrationController::class, 'show'])->name('registrations.show');
-    Route::post('/registrations/{registration}/verify', [App\Http\Controllers\Admin\RegistrationController::class, 'verify'])->name('registrations.verify');
+    Route::get('/registrations/{registration}/verify', [App\Http\Controllers\Admin\RegistrationController::class, 'showVerification'])->name('registrations.verify');
+    Route::post('/registrations/{registration}/verify', [App\Http\Controllers\Admin\RegistrationController::class, 'verify'])->name('registrations.verify.post');
 
     // Reviews
     Route::post('/papers/{paper}/reviews', [App\Http\Controllers\Admin\ReviewController::class, 'store'])->name('reviews.store');

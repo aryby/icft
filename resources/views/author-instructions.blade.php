@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Author Instructions - DESDI 2025')
+@section('title', 'Author Instructions - DESDI 2026')
 @section('description',
-    'Detailed instructions for authors submitting papers to DESDI 2025. Learn about paper
+    'Detailed instructions for authors submitting papers to DESDI 2026. Learn about paper
     preparation, formatting requirements, peer review process, and submission guidelines.')
 
 @section('content')
@@ -23,7 +23,7 @@
 
 
     
-    All materials submitted to DESDI'25 Conference must be original, unpublished research that is not currently under
+    All materials submitted to DESDI'26 Conference must be original, unpublished research that is not currently under
     review
     for any other conference or journal. Papers not following these guidelines may be rejected without review. Also,
     submissions received after the due date, exceeding the length limit, or not appropriately structured may also not be

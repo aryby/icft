@@ -1,11 +1,11 @@
 Home
-International Conference on Digital Economy Smart Business & Data Innovation (DESDI’25)
-The International Conference on Digital Economy, Smart Business & Data Innovation (DESDI’25) aims to serve as a premier interdisciplinary platform for researchers, academics, practitioners, and policymakers to exchange knowledge and discuss emerging trends, challenges, and breakthroughs shaping the digital economy.
-The rise of artificial intelligence (AI), machine learning, and data analytics has transformed how businesses create value, governments design policy, and consumers engage with digital ecosystems. DESDI’25 seeks to explore these transformations through the lenses of technology, innovation, and economic development — connecting cutting-edge research with real-world applications.
+International Conference on Digital Economy Smart Business & Data Innovation (DESDI'26)
+The International Conference on Digital Economy, Smart Business & Data Innovation (DESDI'26) aims to serve as a premier interdisciplinary platform for researchers, academics, practitioners, and policymakers to exchange knowledge and discuss emerging trends, challenges, and breakthroughs shaping the digital economy.
+The rise of artificial intelligence (AI), machine learning, and data analytics has transformed how businesses create value, governments design policy, and consumers engage with digital ecosystems. DESDI'26 seeks to explore these transformations through the lenses of technology, innovation, and economic development — connecting cutting-edge research with real-world applications.
 This conference provides a venue for scholarly collaboration and knowledge exchange in the fields of digital economy, smart business, innovation management, data-driven decision-making, and emerging technologies. 
 Accepted and presented papers will be published in the Springer Proceedings in Business and Economics (SPBE) and submitted for indexing in Scopus and Web of Science (subject to Springer’s indexing policy).( in pending)
  Conference Objectives
-DESDI’25 seeks to:
+DESDI'26 seeks to:
 Promote interdisciplinary research bridging business, economics, and applied technology.
 Explore the impact of data-driven innovation on digital transformation and competitiveness.
 Highlight real-world applications of AI, analytics, and smart technologies in business ecosystems.
@@ -135,18 +135,18 @@ Maria Moussa (American University of Beirut, Lebanon)
 Marin Milkov Zhilevski (Technical University of Sofia, Bulgaria)
 Important Dates
 Paper/Abstract Submission Start Date
-July 05,2025
+October 31, 2025
 Paper/Abstract submission deadline
-September 03, 2025 
+December 31, 2025 
 Notification of acceptance
-September 25, 2025
+February 20, 2026
 Registration deadline
-October 03, 2025
-DESDI'25 Conference Dates
-October 23-24, 2025
+March 20, 2026
+DESDI'26 Conference Dates
+April 23-25, 2026
  Call for Paper/ Abstract
-The International Conference on Digital Economy, Smart Business & Data Innovation (DESDI’25) is an international academic forum dedicated to advancing interdisciplinary research on the intersection of technology, business, and economics. The conference aims to provide a platform for scholars, practitioners, and policymakers to present and discuss innovative approaches, empirical findings, and theoretical developments related to digital transformation, data-driven innovation, and intelligent business ecosystems.
-Digitalization and artificial intelligence are reshaping industries, markets, and policy frameworks worldwide. DESDI’25 seeks to explore these transformations through scientific inquiry and practical insights, fostering a dialogue that connects academia, industry, and government.
+The International Conference on Digital Economy, Smart Business & Data Innovation (DESDI'26) is an international academic forum dedicated to advancing interdisciplinary research on the intersection of technology, business, and economics. The conference aims to provide a platform for scholars, practitioners, and policymakers to present and discuss innovative approaches, empirical findings, and theoretical developments related to digital transformation, data-driven innovation, and intelligent business ecosystems.
+Digitalization and artificial intelligence are reshaping industries, markets, and policy frameworks worldwide. DESDI'26 seeks to explore these transformations through scientific inquiry and practical insights, fostering a dialogue that connects academia, industry, and government.
 Conference Tracks
 Topics Include but not Limited To:
 Track 1: Digital Economy, Governance & Policy
@@ -198,7 +198,7 @@ Cross-sector collaboration and digital public services
 
 Instructions for authors 
  Papers Preparation
-All materials submitted to DESDI'25 Conference must be original, unpublished research that is not currently under review for any other conference or journal. Papers not following these guidelines may be rejected without review. Also, submissions received after the due date, exceeding the length limit, or not appropriately structured may also not be considered.
+All materials submitted to DESDI'26 Conference must be original, unpublished research that is not currently under review for any other conference or journal. Papers not following these guidelines may be rejected without review. Also, submissions received after the due date, exceeding the length limit, or not appropriately structured may also not be considered.
 
 Full papers must be in English and submitted in word format. Each paper must be in the range of 10 - 20 pages.
 Abstract must be in English or French submitted in word format.
@@ -215,27 +215,27 @@ Changes cannot be made during the review process. If accepted, minor revisions m
 Submission
 Authors are invited to choose between two submission options:
 Abstract Submission
-Authors who wish to present their research at the conference without pursuing publication are encouraged to submit an abstract by September 03, 2025. This option is ideal for those interested in sharing their findings and receiving feedback from peers, without the requirement to publish in the conference proceedings.
+Authors who wish to present their research at the conference without pursuing publication are encouraged to submit an abstract by December 31, 2025. This option is ideal for those interested in sharing their findings and receiving feedback from peers, without the requirement to publish in the conference proceedings.
 
 Full Paper Submission
-Authors seeking publication opportunities must submit a full paper by September 03, 2025. All submissions will undergo a rigorous peer-review process to ensure academic quality and thematic relevance.
+Authors seeking publication opportunities must submit a full paper by December 31, 2025. All submissions will undergo a rigorous peer-review process to ensure academic quality and thematic relevance.
 
 Accepted papers will have the opportunity to be published in one of the following outlets:
 - International Journal of Intelligent Management and Data Systems
 - The International Journal of Economic and Management Decisions 
 The Scientific Committee will recommend the most suitable publication outlet for each accepted paper based on its topic and quality. Authors will be kept informed throughout the review and selection process.
-We look forward to your contributions and to welcoming you to DESDI’25 
+We look forward to your contributions and to welcoming you to DESDI'26 
 Registration
 Conference Registration
-Welcome to the registration portal for International Conference on Digital Economy, Smart Business & Data Innovation (DESDI’25). Please complete the form below to register as a presenter or participant.
-To confirm your registration, kindly ensure the registration fee is paid and a payment receipt is sent to: desdi25@desdi.org.
+Welcome to the registration portal for International Conference on Digital Economy, Smart Business & Data Innovation (DESDI'26). Please complete the form below to register as a presenter or participant.
+To confirm your registration, kindly ensure the registration fee is paid and a payment receipt is sent to: desdi26@desdi.org.
 We look forward to your participation!
 Registration Fee
 Registration Type
 EARLY REGISTRATION
-Before October 1st, 2025
+Before March 1st, 2026
 LATE REGISTRATION
-After October 20th, 2025
+After March 20th, 2026
 Student paper registration 
 70 €/ 70 USD 
 90 €/ 90 USD
@@ -264,10 +264,10 @@ Bank Name: CIH Bank
 Beneficiary: Moroccan Association for Smart Systems, Innovation and Research (MASSIR)
 IBAN: 011 330 0000142000001546 25
 SWIFT Code: CIHMAMC
-Reference: DESDI’25
+Reference: DESDI'26
 Registration Payment
-After completing your payment, please email your payment receipt to desdi25@desdi.org with your full name and submission ID (if applicable).
+After completing your payment, please email your payment receipt to desdi26@desdi.org with your full name and submission ID (if applicable).
 Your registration will be confirmed once payment is received. Thank you!
 Further Inquiry:
 
-For any other related information or inquiry regarding the payment, the transaction methods, or difficulties in the registration process, the authors should send an email as soon as possible to desdi25@desdi.org with PaperID, Paper Title, Author(s), and Affiliation included.
+For any other related information or inquiry regarding the payment, the transaction methods, or difficulties in the registration process, the authors should send an email as soon as possible to desdi26@desdi.org with PaperID, Paper Title, Author(s), and Affiliation included.

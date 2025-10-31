@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Publication - DESDI 2025')
+@section('title', 'Publication - DESDI 2026')
 
 @section('content')
 <div class="row-fluid">

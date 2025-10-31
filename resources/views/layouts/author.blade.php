@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Author Dashboard - ICFT 2025')</title>
+    <title>@yield('title', 'Author Dashboard - DESDI 2026')</title>
     <link href="{{ asset('inspire.css') }}" rel="stylesheet">
     <link href="{{ asset('desdi-custom.css') }}" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -54,6 +54,14 @@
         .sidebar-nav a.active {
             background: #34495e;
             color: white;
+        }
+        .sidebar-nav-disabled {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: #7f8c8d;
+            text-decoration: none;
+            cursor: not-allowed;
+            opacity: 0.6;
         }
         .stats-card {
             background: white;
@@ -110,12 +118,12 @@
     </style>
 </head>
 <body>
-    @if(Auth::check() && Auth::user()->status === 'pending')
+    @if(Auth::check() && !Auth::user()->isActive())
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
-            <div id="pendingAccountToast" class="toast align-items-center text-white bg-warning border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div id="inactiveAccountToast" class="toast align-items-center text-white bg-warning border-0" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="d-flex">
                     <div class="toast-body">
-                        Your account is currently under review. You will be notified once it's activated.
+                        Your account is currently inactive. You will be notified once it's activated by an administrator.
                     </div>
                     <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
@@ -123,7 +131,7 @@
         </div>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                var toastLiveExample = document.getElementById('pendingAccountToast')
+                var toastLiveExample = document.getElementById('inactiveAccountToast')
                 var toast = new bootstrap.Toast(toastLiveExample)
                 toast.show()
             });
@@ -141,13 +149,18 @@
                 <a href="{{ route('author.dashboard') }}" class="{{ request()->routeIs('author.dashboard*') ? 'active' : '' }}">
                     <i class="fas fa-tachometer-alt me-2"></i>Dashboard
                 </a>
-                <a href="{{ route('author.papers.create') }}" class="{{ request()->routeIs('author.papers.create*') ? 'active' : '' }}">
-                    <i class="fas fa-plus-circle me-2"></i>Submit Paper
-                </a>
+                @if(Auth::user()->isActive())
+                    <a href="{{ route('author.papers.create') }}" class="{{ request()->routeIs('author.papers.create*') ? 'active' : '' }}">
+                        <i class="fas fa-plus-circle me-2"></i>Submit Paper
+                    </a>
+                @else
+                    <span class="sidebar-nav-disabled" title="Account must be active to submit papers">
+                        <i class="fas fa-plus-circle me-2"></i>Submit Paper
+                    </span>
+                @endif
                 <a href="{{ route('author.papers.index') }}" class="{{ request()->routeIs('author.papers.index*') ? 'active' : '' }}">
                     <i class="fas fa-file-alt me-2"></i>My Papers
                 </a>
-
             </nav>
         </aside>
 

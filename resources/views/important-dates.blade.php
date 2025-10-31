@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Important Dates - DESDI 2025')
-@section('description', 'Important dates and deadlines for DESDI 2025 conference. Paper submission, acceptance notification, registration, and conference dates.')
+@section('title', 'Important Dates - DESDI 2026')
+@section('description', 'Important dates and deadlines for DESDI 2026 conference. Paper submission, acceptance notification, registration, and conference dates.')
 
 @section('content')
 <!-- Page Header -->
@@ -12,7 +12,7 @@
         </div>
         <div class="text-center">
             <p class="lead">
-                Mark these important dates and deadlines for DESDI 2025 in your calendar
+                Mark these important dates and deadlines for DESDI 2026 in your calendar
             </p>
         </div>
     </div>
@@ -22,7 +22,7 @@
 <div class="row-fluid">
     <div class="span12">
         <div class="well">
-            <h3 class="text-center">DESDI 2025 Conference Timeline</h3>
+            <h3 class="text-center">DESDI 2026 Conference Timeline</h3>
             <p class="text-center lead">Stay updated with all important deadlines and events</p>
         </div>
     </div>
@@ -33,14 +33,14 @@
     <div class="span6">
         <div class="well text-center">
             <h4>Paper/Abstract Submission Start Date</h4>
-            <h2 class="text-primary">July 05, 2025</h2>
+            <h2 class="text-primary">October 31, 2025</h2>
             <p>Submission portal opens for authors</p>
         </div>
     </div>
     <div class="span6">
         <div class="well text-center">
             <h4>Paper/Abstract Submission Deadline</h4>
-            <h2 class="text-info">September 03, 2025</h2>
+            <h2 class="text-info">December 31, 2025</h2>
             <p>Final deadline for paper and abstract submissions</p>
         </div>
     </div>
@@ -50,14 +50,14 @@
     <div class="span6">
         <div class="well text-center">
             <h4>Notification of Acceptance</h4>
-            <h2 class="text-success">September 25, 2025</h2>
+            <h2 class="text-success">February 20, 2026</h2>
             <p>Authors will be notified of acceptance decisions</p>
         </div>
     </div>
     <div class="span6">
         <div class="well text-center">
             <h4>Registration Deadline</h4>
-            <h2 class="text-warning">October 03, 2025</h2>
+            <h2 class="text-warning">March 20, 2026</h2>
             <p>Registration deadline for accepted papers</p>
         </div>
     </div>
@@ -67,8 +67,8 @@
 <div class="row-fluid">
     <div class="span12">
         <div class="alert alert-success text-center">
-            <h2>DESDI'25 Conference Dates</h2>
-            <h1 class="text-success">October 23-24, 2025</h1>
+            <h2>DESDI'26 Conference Dates</h2>
+            <h1 class="text-success">April 23-25, 2026</h1>
             <p class="lead">Join us in Morocco for the International Conference on Digital Economy Smart Business & Data Innovation</p>
         </div>
     </div>
@@ -126,7 +126,7 @@
                 <li>Peer review by experts</li>
                 <li>Plagiarism checking</li>
                 <li>Quality assessment</li>
-                <li>Notification by September 25</li>
+                <li>Notification by February 20, 2026</li>
             </ul>
         </div>
     </div>
@@ -138,7 +138,7 @@
         <div class="alert alert-success text-center">
             <h2>Ready to Submit Your Research?</h2>
             <p class="lead">
-                Don't miss the opportunity to present your work at DESDI 2025. Submit your paper before the deadline.
+                Don't miss the opportunity to present your work at DESDI 2026. Submit your paper before the deadline.
             </p>
             <p>
                 <a href="{{ route('submission') }}" class="btn btn-primary btn-large">Submit Your Paper</a>

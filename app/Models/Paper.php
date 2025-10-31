@@ -20,6 +20,10 @@ class Paper extends Model
         'reviewed_at',
         'accepted_at',
         'track',
+        'submission_option',
+        'affiliation',
+        'country',
+        'phone',
     ];
 
     protected $casts = [

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Attendees - DESDI 2025')
+@section('title', 'Attendees - DESDI 2026')
 
 @section('content')
 <div class="row-fluid">
@@ -10,7 +10,7 @@
         </div>
         <div class="text-center">
             <p class="lead">
-                Important information for DESDI 2025 attendees
+                Important information for DESDI 2026 attendees
             </p>
         </div>
     </div>
@@ -22,7 +22,7 @@
             <h3>Conference Information</h3>
             <ul>
                 <li><strong>Venue:</strong> Morocco</li>
-                <li><strong>Dates:</strong> October 23-24, 2025</li>
+                <li><strong>Dates:</strong> April 23-25, 2026</li>
                 <li><strong>Format:</strong> In-person with virtual components</li>
             </ul>
         </div>
@@ -34,7 +34,7 @@
         <div class="well">
             <h3>Travel Information</h3>
             <p>Detailed travel and accommodation information will be provided closer to the conference date.</p>
-            <p>For specific inquiries, please contact us at <strong>desdi25@desdi.org</strong></p>
+            <p>For specific inquiries, please contact us at <strong>desdi26@desdi.org</strong></p>
         </div>
     </div>
 </div>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Registration - ICFT 2025')
-@section('description', 'Register for ICFT 2025 - International Conference on Digital Economy Smart Business & Data Innovation. Early registration available until October 1st, 2025.')
+@section('title', 'Registration - DESDI 2026')
+@section('description', 'Register for DESDI 2026 - International Conference on Digital Economy Smart Business & Data Innovation. Early registration available until March 1st, 2026.')
 
 @section('content')
 <!-- Page Header -->
@@ -12,10 +12,10 @@
         </div>
         <div class="text-center">
             <p class="lead">
-                Welcome to the registration portal for International Conference on Digital Economy, Smart Business & Data Innovation (DESDI'25). Please complete the form below to register as a presenter or participant.
+                Welcome to the registration portal for International Conference on Digital Economy, Smart Business & Data Innovation (DESDI'26). Please complete the form below to register as a presenter or participant.
             </p>
             <p>
-                To confirm your registration, kindly ensure the registration fee is paid and a payment receipt is sent to: <strong>desdi25@desdi.org</strong>
+                To confirm your registration, kindly ensure the registration fee is paid and a payment receipt is sent to: <strong>desdi26@desdi.org</strong>
             </p>
             <p class="text-success"><strong>We look forward to your participation!</strong></p>
         </div>
@@ -37,8 +37,8 @@
             <thead>
                 <tr>
                     <th>Registration Type</th>
-                    <th class="text-center">Early Registration<br><small>Before October 1st, 2025</small></th>
-                    <th class="text-center">Late Registration<br><small>After October 1st, 2025</small></th>
+                    <th class="text-center">Early Registration<br><small>Before March 1st, 2026</small></th>
+                    <th class="text-center">Late Registration<br><small>After March 1st, 2026</small></th>
                 </tr>
             </thead>
             <tbody>
@@ -107,13 +107,13 @@
             <p><strong>Beneficiary:</strong> Moroccan Association for Smart Systems, Innovation and Research (MASSIR)</p>
             <p><strong>IBAN:</strong> 011 330 0000142000001546 25</p>
             <p><strong>SWIFT Code:</strong> CIHMAMC</p>
-            <p><strong>Reference:</strong> DESDI'25</p>
+            <p><strong>Reference:</strong> DESDI'26</p>
         </div>
     </div>
     <div class="span6">
         <div class="well">
             <h4>Registration Payment</h4>
-            <p>After completing your payment, please email your payment receipt to <strong>desdi25@desdi.org</strong> with your full name and submission ID (if applicable).</p>
+            <p>After completing your payment, please email your payment receipt to <strong>desdi26@desdi.org</strong> with your full name and submission ID (if applicable).</p>
             <p><strong>Your registration will be confirmed once payment is received. Thank you!</strong></p>
         </div>
     </div>
@@ -230,7 +230,7 @@
     <div class="span12">
         <div class="alert alert-info">
             <h4>Further Inquiry</h4>
-            <p>For any other related information or inquiry regarding the payment, the transaction methods, or difficulties in the registration process, the authors should send an email as soon as possible to <strong>desdi25@desdi.org</strong> with PaperID, Paper Title, Author(s), and Affiliation included.</p>
+            <p>For any other related information or inquiry regarding the payment, the transaction methods, or difficulties in the registration process, the authors should send an email as soon as possible to <strong>desdi26@desdi.org</strong> with PaperID, Paper Title, Author(s), and Affiliation included.</p>
         </div>
     </div>
 </div>

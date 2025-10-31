@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'About DESDI - DESDI 2025')
+@section('title', 'About DESDI - DESDI 2026')
 
 @section('content')
 <div class="row-fluid">
@@ -21,7 +21,7 @@
         <div class="well">
             <h3>Conference Overview</h3>
             <p>
-                DESDI 2025 is the inaugural International Conference on Digital Economy Smart Business & Data Innovation. 
+                DESDI 2026 is the second International Conference on Digital Economy Smart Business & Data Innovation. 
                 This conference aims to serve as a premier interdisciplinary platform for researchers, academics, practitioners, 
                 and policymakers to exchange knowledge and discuss emerging trends, challenges, and breakthroughs shaping the digital economy.
             </p>
@@ -35,7 +35,7 @@
             <h3>Conference Mission</h3>
             <p>
                 The rise of artificial intelligence (AI), machine learning, and data analytics has transformed how businesses create value, 
-                governments design policy, and consumers engage with digital ecosystems. DESDI'25 seeks to explore these transformations 
+                governments design policy, and consumers engage with digital ecosystems. DESDI'26 seeks to explore these transformations 
                 through the lenses of technology, innovation, and economic development — connecting cutting-edge research with real-world applications.
             </p>
         </div>

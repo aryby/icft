@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Admin Dashboard - ICFT 2025')
+@section('title', 'Admin Dashboard - DESDI 2026')
 @section('page_title', 'Dashboard')
 
 @section('content')

@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Create User - ICFT 2025')
+@section('title', 'Create User - DESDI 2026')
 @section('page_title', 'Create New User')
 
 @section('content')

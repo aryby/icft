@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Login - ICFT 2025 Admin</title>
+    <title>Login - DESDI 2026 Admin</title>
     <link href="{{ asset('inspire.css') }}" rel="stylesheet">
     <link href="{{ asset('desdi-custom.css') }}" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +46,7 @@
         <div class="login-header">
             <div class="login-logo">IC</div>
             <h2 class="h4 mb-2">Sign in to admin panel</h2>
-            <p class="text-muted">ICFT 2025 Conference Management</p>
+            <p class="text-muted">DESDI 2026 Conference Management</p>
         </div>
         
         <form method="POST" action="{{ route('login') }}">

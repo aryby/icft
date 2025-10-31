@@ -1,18 +1,18 @@
 @extends('layouts.app')
 
-@section('title', 'About DESDI 2025 - International Conference on Digital Economy Smart Business & Data Innovation')
-@section('description', 'Learn about DESDI 2025, our mission, vision, and the exciting program we have planned for this premier international conference on digital economy and data innovation.')
+@section('title', 'About DESDI 2026 - International Conference on Digital Economy Smart Business & Data Innovation')
+@section('description', 'Learn about DESDI 2026, our mission, vision, and the exciting program we have planned for this premier international conference on digital economy and data innovation.')
 
 @section('content')
 <!-- Page Header -->
 <div class="row-fluid">
     <div class="span12">
         <div class="titleborder">
-            <div>About DESDI 2025</div>
+            <div>About DESDI 2026</div>
         </div>
         <div class="text-center">
             <p class="lead">
-                Discover the vision, mission, and exciting program that makes DESDI 2025 a premier destination for digital economy and data innovation research.
+                Discover the vision, mission, and exciting program that makes DESDI 2026 a premier destination for digital economy and data innovation research.
             </p>
         </div>
     </div>
@@ -25,7 +25,7 @@
             <div>Our Mission</div>
         </div>
         <p class="lead">
-            DESDI 2025 aims to bring together the world's leading researchers, academics, and industry professionals to explore and discuss the latest innovations in digital economy, smart business, and data innovation. We are committed to fostering collaboration, knowledge sharing, and the advancement of cutting-edge research that will shape our digital future.
+            DESDI 2026 aims to bring together the world's leading researchers, academics, and industry professionals to explore and discuss the latest innovations in digital economy, smart business, and data innovation. We are committed to fostering collaboration, knowledge sharing, and the advancement of cutting-edge research that will shape our digital future.
         </p>
         <p>
             Our mission is to create a platform where groundbreaking ideas in digital transformation meet practical applications, where theoretical research transforms into real-world business solutions, and where the next generation of digital economy leaders can connect and collaborate.
@@ -48,7 +48,7 @@
             <div>Conference Highlights</div>
         </div>
         <p class="text-center lead">
-            What makes DESDI 2025 a must-attend event for digital economy professionals and researchers
+            What makes DESDI 2026 a must-attend event for digital economy professionals and researchers
         </p>
     </div>
 </div>
@@ -156,7 +156,7 @@
 <div class="row-fluid">
     <div class="span12">
         <div class="alert alert-info text-center">
-            <h2>Join Us at DESDI 2025</h2>
+            <h2>Join Us at DESDI 2026</h2>
             <p class="lead">
                 Be part of the conversation that will shape the future of digital economy and data innovation. Register now and secure your spot at this premier international conference.
             </p>

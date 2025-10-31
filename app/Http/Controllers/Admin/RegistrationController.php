@@ -39,4 +39,10 @@ class RegistrationController extends Controller
         return redirect()->route('admin.registrations.index')
             ->with('success', "Registration payment {$status} successfully.");
     }
+
+    public function showVerification(Registration $registration)
+    {
+        $registration->load(['user', 'verifiedBy']);
+        return view('admin.registrations.verify', compact('registration'));
+    }
 }

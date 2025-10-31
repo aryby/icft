@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Committee - DESDI 2025')
+@section('title', 'Committee - DESDI 2026')
 @section('description',
-    'Meet the distinguished committee members of DESDI 2025, including general chairs, programme
+    'Meet the distinguished committee members of DESDI 2026, including general chairs, programme
     committee chairs, and technical program committees from leading institutions worldwide.')
 
 @section('content')
@@ -13,7 +13,7 @@
         <div class="alert-info">
             <h4 class="alert-info mb-0 pb-0"><strong>| Conference Committee</strong></h4>
             <p class="text-muted mb-0 mt-0 pt-0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                Meet the distinguished researchers and industry leaders who make DESDI 2025 possible
+                Meet the distinguished researchers and industry leaders who make DESDI 2026 possible
             </p>
 
         </div>

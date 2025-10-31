@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Paper Submission - DESDI 2025')
-@section('description', 'Submit your research paper to DESDI 2025. Follow our submission guidelines and upload your
-    paper through our secure submission system. Deadline: September 03, 2025.')
+@section('title', 'Paper Submission - DESDI 2026')
+@section('description', 'Submit your research paper to DESDI 2026. Follow our submission guidelines and upload your
+    paper through our secure submission system. Deadline: December 31, 2025.')
 
 @section('content')
     <!-- Page Header -->
@@ -17,13 +17,13 @@
     <ul>Authors are invited to choose between two submission options:
         <li><span class="alert-dark">Abstract Submission</span></li>
         <li>Authors who wish to present their research at the conference without pursuing publication are encouraged to
-            submit an abstract by September 03, 2025. This option is ideal for those interested in sharing their findings
+            submit an abstract by December 31, 2025. This option is ideal for those interested in sharing their findings
             and receiving feedback from peers, without the requirement to publish in the conference proceedings.
         </li>
         <li>
             <span class="alert-dark">Full Paper Submission</span></li>
         <li>
-        </li>Authors seeking publication opportunities must submit a full paper by September 03, 2025. All submissions will
+        </li>Authors seeking publication opportunities must submit a full paper by December 31, 2025. All submissions will
         undergo a rigorous peer-review process to ensure academic quality and thematic relevance.
     </ul>
     <ul>
@@ -40,7 +40,7 @@
     </ul>
     Scientific Committee will recommend the most suitable publication outlet for each accepted paper based on its topic and
     quality. Authors will be kept informed throughout the review and selection process.
-    We look forward to your contributions and to welcoming you to DESDI’25
+    We look forward to your contributions and to welcoming you to DESDI'26
     <!-- Submission Form -->
     <div class="row-fluid">
         <div class="span12">
@@ -52,7 +52,24 @@
 
     <div class="row-fluid">
         <div class="span12">
-            <form class="form-horizontal">
+            <form class="form-horizontal" action="{{ route('submission.store') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+
+                @if(session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+                @endif
+
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <!-- Paper Information -->
                 <div class="well">
                     <h3>Paper Information</h3>
@@ -68,9 +85,9 @@
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label" for="paper-title">Paper Title *</label>
+                        <label class="control-label" for="title">Paper Title *</label>
                         <div class="controls">
-                            <input type="text" id="paper-title" name="paper-title" class="input-xlarge" required
+                            <input type="text" id="title" name="title" class="input-xlarge" required
                                 placeholder="Enter your paper title">
                         </div>
                     </div>
@@ -111,18 +128,10 @@
                     <h3>Author Information</h3>
 
                     <div class="control-group">
-                        <label class="control-label" for="first-name">First Name *</label>
+                        <label class="control-label" for="name">Full Name *</label>
                         <div class="controls">
-                            <input type="text" id="first-name" name="first-name" class="input-xlarge" required
-                                placeholder="Enter first name">
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label class="control-label" for="last-name">Last Name *</label>
-                        <div class="controls">
-                            <input type="text" id="last-name" name="last-name" class="input-xlarge" required
-                                placeholder="Enter last name">
+                            <input type="text" id="name" name="name" class="input-xlarge" required
+                                placeholder="Enter your full name">
                         </div>
                     </div>
 
@@ -175,9 +184,9 @@
                 <div class="well">
                     <h3>Paper Upload</h3>
                     <div class="control-group">
-                        <label class="control-label" for="paper-file">Upload Paper *</label>
+                        <label class="control-label" for="file">Upload Paper *</label>
                         <div class="controls">
-                            <input type="file" id="paper-file" name="paper-file" accept=".pdf" required>
+                            <input type="file" id="file" name="file" accept=".pdf" required>
                             <p class="help-block">PDF format only, maximum 8 pages, file size limit: 10MB</p>
                         </div>
                     </div>
@@ -201,7 +210,7 @@
                         <div class="controls">
                             <label class="checkbox">
                                 <input type="checkbox" name="copyright" required>
-                                I agree to transfer copyright to DESDI 2025 if the paper is accepted for publication. *
+                                I agree to transfer copyright to DESDI 2026 if the paper is accepted for publication. *
                             </label>
                         </div>
                     </div>

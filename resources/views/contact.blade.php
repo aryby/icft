@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Contact Us - DESDI 2025')
-@section('description', 'Get in touch with the DESDI 2025 organizing committee. Contact us for questions about paper submission, registration, sponsorship, or general inquiries.')
+@section('title', 'Contact Us - DESDI 2026')
+@section('description', 'Get in touch with the DESDI 2026 organizing committee. Contact us for questions about paper submission, registration, sponsorship, or general inquiries.')
 
 @section('content')
 <!-- Page Header -->
@@ -12,7 +12,7 @@
         </div>
         <div class="text-center">
             <p class="lead">
-                Get in touch with our organizing committee for any questions or inquiries about DESDI 2025
+                Get in touch with our organizing committee for any questions or inquiries about DESDI 2026
             </p>
         </div>
     </div>
@@ -92,13 +92,13 @@
             <div class="well">
                 <h4>Email</h4>
                 <p>General inquiries and support</p>
-                <p><strong>desdi25@desdi.org</strong></p>
+                <p><strong>desdi26@desdi.org</strong></p>
             </div>
             
             <div class="well">
                 <h4>Conference Venue</h4>
                 <p>Morocco</p>
-                <p>October 23-24, 2025</p>
+                <p>April 23-25, 2026</p>
             </div>
         </div>
     </div>
@@ -110,7 +110,7 @@
         <div class="titleborder">
             <div>Frequently Asked Questions</div>
         </div>
-        <p class="text-center lead">Find answers to common questions about DESDI 2025</p>
+        <p class="text-center lead">Find answers to common questions about DESDI 2026</p>
     </div>
 </div>
 
@@ -118,7 +118,7 @@
     <div class="span12">
         <div class="well">
             <h4>When is the paper submission deadline?</h4>
-            <p>The paper submission deadline is <strong>September 03, 2025</strong> at 11:59 PM. Late submissions will not be accepted.</p>
+            <p>The paper submission deadline is <strong>December 31, 2025</strong> at 11:59 PM. Late submissions will not be accepted.</p>
         </div>
     </div>
 </div>
@@ -127,7 +127,7 @@
     <div class="span12">
         <div class="well">
             <h4>What is the conference format?</h4>
-            <p>DESDI 2025 will be held in-person in Morocco, with some virtual components for international participants.</p>
+            <p>DESDI 2026 will be held in-person in Morocco, with some virtual components for international participants.</p>
         </div>
     </div>
 </div>
@@ -136,7 +136,7 @@
     <div class="span12">
         <div class="well">
             <h4>How much does registration cost?</h4>
-            <p>Registration fees vary by category. Early registration rates are available until October 1st, 2025. Please check the registration page for detailed pricing.</p>
+            <p>Registration fees vary by category. Early registration rates are available until March 1st, 2026. Please check the registration page for detailed pricing.</p>
         </div>
     </div>
 </div>
@@ -156,10 +156,10 @@
         <div class="alert alert-info text-center">
             <h2>Still Have Questions?</h2>
             <p class="lead">
-                Don't hesitate to reach out to us. We're here to help make your DESDI 2025 experience exceptional.
+                Don't hesitate to reach out to us. We're here to help make your DESDI 2026 experience exceptional.
             </p>
             <p>
-                <a href="mailto:desdi25@desdi.org" class="btn btn-primary btn-large">Email Us</a>
+                <a href="mailto:desdi26@desdi.org" class="btn btn-primary btn-large">Email Us</a>
             </p>
         </div>
     </div>

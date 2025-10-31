@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Call for Papers - DESDI 2025')
-@section('description', 'Submit your research papers to DESDI 2025. We invite original contributions in digital economy,
-    smart business, data innovation, and emerging technologies. Deadline: September 03, 2025.')
+@section('title', 'Call for Papers - DESDI 2026')
+@section('description', 'Submit your research papers to DESDI 2026. We invite original contributions in digital economy,
+    smart business, data innovation, and emerging technologies. Deadline: December 31, 2025.')
 
 @section('content')
     <!-- Page Header -->
@@ -19,13 +19,13 @@
         </div>
         <div class="panel1">
             <div class="span11">
-                The International Conference on Digital Economy, Smart Business & Data Innovation (DESDI’25) is an
+                The International Conference on Digital Economy, Smart Business & Data Innovation (DESDI'26) is an
                 international academic forum dedicated to advancing interdisciplinary research on the intersection of
                 technology, business, and economics. The conference aims to provide a platform for scholars, practitioners,
                 and policymakers to present and discuss innovative approaches, empirical findings, and theoretical
                 developments related to digital transformation, data-driven innovation, and intelligent business ecosystems.
                 Digitalization and artificial intelligence are reshaping industries, markets, and policy frameworks
-                worldwide. DESDI’25 seeks to explore these transformations through scientific inquiry and practical
+                worldwide. DESDI'26 seeks to explore these transformations through scientific inquiry and practical
                 insights, fostering a dialogue that connects academia, industry, and government.
                 
                 <br>

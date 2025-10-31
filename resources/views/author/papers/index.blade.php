@@ -1,6 +1,6 @@
 @extends('layouts.author')
 
-@section('title', 'My Papers - ICFT 2025')
+@section('title', 'My Papers - DESDI 2026')
 @section('page_title', 'My Papers')
 
 @section('content')

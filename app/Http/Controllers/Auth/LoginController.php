@@ -42,9 +42,9 @@ class LoginController extends Controller
         if (Auth::attempt($credentials, $remember)) {
             $request->session()->regenerate();
             
-            if (Auth::user()->type === 'admin') {
+            if (Auth::user()->isAdmin()) {
                 return redirect()->intended(route('admin.dashboard'));
-            } else if (Auth::user()->type === 'author') {
+            } else if (Auth::user()->isAuthor()) {
                 return redirect()->intended(route('author.dashboard'));
             }
             return redirect()->intended(route('home')); // Default redirect for other types

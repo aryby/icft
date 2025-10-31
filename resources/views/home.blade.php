@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'DESDI’25 - Home')
+@section('title', 'DESDI 26 - Home')
 
 @section('content')
     @include('partials.hero-slider')

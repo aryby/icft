@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Speakers - DESDI 2025')
+@section('title', 'Speakers - DESDI 2026')
 
 @section('content')
 <div class="row-fluid">
@@ -27,7 +27,7 @@
                 We are looking for distinguished speakers to share their expertise in digital economy, smart business, and data innovation.
             </p>
             <p>
-                If you are interested in speaking at DESDI 2025, please contact us at <strong>desdi25@desdi.org</strong>
+                If you are interested in speaking at DESDI 2026, please contact us at <strong>desdi26@desdi.org</strong>
             </p>
         </div>
     </div>

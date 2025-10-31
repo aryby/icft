@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Calls - DESDI 2025')
+@section('title', 'Calls - DESDI 2026')
 
 @section('content')
 <div class="row-fluid">
@@ -10,7 +10,7 @@
         </div>
         <div class="text-center">
             <p class="lead">
-                Various calls and opportunities for DESDI 2025
+                Various calls and opportunities for DESDI 2026
             </p>
         </div>
     </div>
@@ -34,7 +34,7 @@
             <h3>Call for Workshops</h3>
             <p>
                 We welcome proposals for workshops that complement the main conference program. 
-                For workshop proposals, please contact us at <strong>desdi25@desdi.org</strong>
+                For workshop proposals, please contact us at <strong>desdi26@desdi.org</strong>
             </p>
         </div>
     </div>
@@ -45,8 +45,8 @@
         <div class="well">
             <h3>Call for Sponsorship</h3>
             <p>
-                We offer various sponsorship opportunities for organizations interested in supporting DESDI 2025. 
-                For sponsorship information, please contact us at <strong>desdi25@desdi.org</strong>
+                We offer various sponsorship opportunities for organizations interested in supporting DESDI 2026. 
+                For sponsorship information, please contact us at <strong>desdi26@desdi.org</strong>
             </p>
         </div>
     </div>

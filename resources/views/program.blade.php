@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Program - DESDI 2025')
+@section('title', 'Program - DESDI 2026')
 
 @section('content')
 <div class="row-fluid">
@@ -24,10 +24,10 @@
         <div class="well text-center">
             <h3>Conference Schedule Overview</h3>
             <p>
-                DESDI 2025 will feature keynote presentations, parallel sessions, workshops, and networking opportunities.
+                DESDI 2026 will feature keynote presentations, parallel sessions, workshops, and networking opportunities.
             </p>
             <p>
-                For program updates, please contact us at <strong>desdi25@desdi.org</strong>
+                For program updates, please contact us at <strong>desdi26@desdi.org</strong>
             </p>
         </div>
     </div>

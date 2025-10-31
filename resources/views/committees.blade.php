@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Committees - DESDI 2025')
+@section('title', 'Committees - DESDI 2026')
 
 @section('content')
 <div class="row-fluid">
@@ -10,7 +10,7 @@
         </div>
         <div class="text-center">
             <p class="lead">
-                Meet the distinguished committee members of DESDI 2025
+                Meet the distinguished committee members of DESDI 2026
             </p>
         </div>
     </div>
@@ -25,7 +25,7 @@
                 <a href="{{ route('committee') }}">Committee page</a>.
             </p>
             <p>
-                For committee-related inquiries, please contact us at <strong>desdi25@desdi.org</strong>
+                For committee-related inquiries, please contact us at <strong>desdi26@desdi.org</strong>
             </p>
         </div>
     </div>

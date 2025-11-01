@@ -23,9 +23,6 @@
                 <div class="titleborder">
                     <div class="alert-info">General Chairs</div>
                 </div>
-                <p class="lead">
-                    Leading the overall conference organization and strategic direction
-                </p>
             </div>
         </div>
 

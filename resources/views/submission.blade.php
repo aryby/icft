@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('title', 'Paper Submission - DESDI 2026')
-@section('description', 'Submit your research paper to DESDI 2026. Follow our submission guidelines and upload your
+@section('description',
+    'Submit your research paper to DESDI 2026. Follow our submission guidelines and upload your
     paper through our secure submission system. Deadline: December 31, 2025.')
 
 @section('content')
@@ -21,22 +22,30 @@
             and receiving feedback from peers, without the requirement to publish in the conference proceedings.
         </li>
         <li>
-            <span class="alert-dark">Full Paper Submission</span></li>
+            <span class="alert-dark">Full Paper Submission</span>
+        </li>
         <li>
         </li>Authors seeking publication opportunities must submit a full paper by December 31, 2025. All submissions will
         undergo a rigorous peer-review process to ensure academic quality and thematic relevance.
     </ul>
     <ul>
+
         <li>
-            Accepted papers will have the opportunity to be published in one of the following outlets:
+            <strong> Accepted papers will have the opportunity to be published in one of the following outlets:
+            </strong>
             <ol style="list-style: none">
-                <li>- International Journal of Intelligent Management and Data Systems
-        </li>
-        <li>- The International Journal of Economic and Management Decisions
-        </li>
+                <li>
+                    - Springer Proceedings in Business and Economics
+                </li>
+                <li>
+                    - International Journal of Intelligent Management and Data Systems
+                </li>
+                <li>
+                    - The International Journal of Economic and Management Decisions
+                </li>
             </ol>
         </li>
-        
+
     </ul>
     Scientific Committee will recommend the most suitable publication outlet for each accepted paper based on its topic and
     quality. Authors will be kept informed throughout the review and selection process.
@@ -52,10 +61,11 @@
 
     <div class="row-fluid">
         <div class="span12">
-            <form class="form-horizontal" action="{{ route('submission.store') }}" method="POST" enctype="multipart/form-data">
+            <form class="form-horizontal" action="{{ route('submission.store') }}" method="POST"
+                enctype="multipart/form-data">
                 @csrf
 
-                @if(session('status'))
+                @if (session('status'))
                     <div class="alert alert-success">
                         {{ session('status') }}
                     </div>

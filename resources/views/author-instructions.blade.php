@@ -41,9 +41,11 @@
      Each paper must be in the range of 10 - 20 pages. <br>
      <span class="alert-dark">Abstract </span> must be in English or French submitted in word format.
      <br>
-                The DESDI template for preparing a full paper and Abstract can be downloaded here :
-                ( <a href="#">full paper template</a> / <a href="#">Abstract template</a>
+                <strong>
+                    The DESDI template for preparing a full paper and Abstract can be downloaded here :
+                ( <a href="{{ asset('downloads/full_desdi_template.docx') }}">full paper template</a> / <a href="{{ asset('downloads/abstract_desdi_template.docx') }}">Abstract template</a>
                 )
+                </strong>
             </div>
             <div class="clearfix"></div>
         </div>

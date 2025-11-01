@@ -11,7 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #363636ff 0%, #ffffffff 100%);
             min-height: 100vh;
         }
         .login-card {
@@ -27,10 +27,9 @@
             margin-bottom: 2rem;
         }
         .login-logo {
-            width: 60px;
+            width: 80px;
             height: 60px;
-            background: #007bff;
-            border-radius: 50%;
+            background: #005f98;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -44,9 +43,8 @@
 <body class="d-flex align-items-center justify-content-center min-vh-100">
     <div class="login-card">
         <div class="login-header">
-            <div class="login-logo">IC</div>
-            <h2 class="h4 mb-2">Sign in to admin panel</h2>
-            <p class="text-muted">DESDI 2026 Conference Management</p>
+            <div class="login-logo">DESDI 2026</div>
+            <h2 class="h4 mb-2">Sign in to your Account</h2>
         </div>
         
         <form method="POST" action="{{ route('login') }}">
@@ -86,7 +84,7 @@
             </div>
 
             <div class="d-grid">
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn btn-primary" style="background-color: #005f98; border-color: #005f98;">
                     <i class="fas fa-sign-in-alt me-2"></i>Sign in
                 </button>
             </div>

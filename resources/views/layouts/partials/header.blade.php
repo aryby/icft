@@ -16,9 +16,10 @@
                             Innovation</a>
                     </div>
                     <div class="infoaddress">
-                        <p>2026<br>
-                        </p>
                         <p>April 23-25, 2026 // Morocco</p>
+
+                        @include('partials.partnes-logo')
+                        
                     </div>
                 </div>
 
@@ -30,7 +31,7 @@
                             <li><a href="{{ route('home') }}">Home</a></li>
 
                             <li><a href="{{ route('committee') }}">COMMITTEE</a></li>
-                           
+
                             <li><a href="{{ route('important-dates') }}">IMPORTANT DATES</a></li>
                             <li class="divider-vertical"></li>
                             <li class="dropdown">
@@ -49,17 +50,18 @@
 
                             @auth
                                 {{-- Show dashboard link based on user role --}}
-                                @if(auth()->user()->isAdmin())
+                                @if (auth()->user()->isAdmin())
                                     <li><a href="{{ route('admin.dashboard') }}">ADMIN DASHBOARD</a></li>
                                 @elseif(auth()->user()->isAuthor())
                                     <li><a href="{{ route('author.dashboard') }}">AUTHOR DASHBOARD</a></li>
                                 @endif
-                                
+
                                 {{-- Show logout link for authenticated users --}}
                                 <li>
                                     <form method="POST" action="{{ route('logout') }}" style="display: inline;">
                                         @csrf
-                                        <button type="submit" style="background: none; border: none; color: inherit; cursor: pointer; padding: 0; text-decoration: none;">
+                                        <button type="submit"
+                                            style="background: none; border: none; color: inherit; cursor: pointer; padding: 0; text-decoration: none;">
                                             LOGOUT
                                         </button>
                                     </form>

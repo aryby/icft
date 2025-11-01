@@ -18,9 +18,10 @@
                     <div class="infoaddress">
                         <p>April 23-25, 2026 // Morocco</p>
 
-                        @include('partials.partnes-logo')
                         
                     </div>
+                                            @include('partials.partnes-logo')
+
                 </div>
 
                 <div class="clearfix"></div>

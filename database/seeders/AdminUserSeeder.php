@@ -16,7 +16,7 @@ class AdminUserSeeder extends Seeder
     {
         User::create([
             'name' => 'Admin User',
-            'email' => 'admin@icft2025.com',
+            'email' => 'admin@desdi.org',
             'password' => Hash::make('password'),
             'email_verified_at' => now(),
             'role' => 'admin',

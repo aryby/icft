@@ -1,11 +1,11 @@
 # ICFT 2025 - International Conference on Future Technology
 
-A Laravel 11 web platform for an academic conference/journal site inspired by ICCIP and ICFT designs.
+A Laravel 11 web platform for an academic conference/journal site inspired by DESDI and ICFT designs.
 
 ## Features
 
 ### ✅ Completed
-- **Responsive Homepage** - ICCIP-style design with hero section, important dates, topics, and call-to-action
+- **Responsive Homepage** - DESDI-style design with hero section, important dates, topics, and call-to-action
 - **Static Pages** - About, Call for Papers, Committee, Submission, Contact
 - **Clean Architecture** - MVC structure with organized controllers and views
 - **Tailwind CSS** - Modern, responsive styling with professional design

@@ -9,28 +9,69 @@
                 <div class="clearfix"></div>
 
                 <p align="justify">
-                    <span class="text-info">International Conference on Digital Economy Smart Business & Data Innovation (DESDI'26)</span> aims to serve as a premier interdisciplinary platform for researchers, academics, practitioners, and policymakers to exchange knowledge and discuss emerging trends, challenges, and breakthroughs shaping the digital economy.<br>
+                    <span class="text-info">International Conference on Digital Economy Smart Business & Data Innovation
+                        (DESDI'26)</span> aims to serve as a premier interdisciplinary platform for researchers,
+                    academics, practitioners, and policymakers to exchange knowledge and discuss emerging trends,
+                    challenges, and breakthroughs shaping the digital economy.<br>
                     <br>
-                    The rise of artificial intelligence (AI), machine learning, and data analytics has transformed how businesses create value, governments design policy, and consumers engage with digital ecosystems. DESDI'26 seeks to explore these transformations through the lenses of technology, innovation, and economic development — connecting cutting-edge research with real-world applications.
+                    The rise of artificial intelligence (AI), machine learning, and data analytics has transformed how
+                    businesses create value, governments design policy, and consumers engage with digital ecosystems.
+                    DESDI'26 seeks to explore these transformations through the lenses of technology, innovation, and
+                    economic development — connecting cutting-edge research with real-world applications.
                 </p>
-                <p align="justify">This conference provides a venue for scholarly collaboration and knowledge exchange in the fields of digital economy, smart business, innovation management, data-driven decision-making, and emerging technologies.</p>
-                <p align="justify">Accepted and presented papers will be published in the Springer Proceedings in Business and Economics (SPBE) and submitted for indexing in Scopus and Web of Science (subject to Springer's indexing policy).</p>
+                <p align="justify">This conference provides a venue for scholarly collaboration and knowledge exchange in
+                    the fields of digital economy, smart business, innovation management, data-driven decision-making,
+                    and emerging technologies.</p>
+                <p align="justify">Accepted and presented papers will be published in the Springer Proceedings in
+                    Business and Economics (SPBE) and submitted for indexing in Scopus and Web of Science (subject to
+                    Springer's indexing policy).</p>
                 <p class="alert-info">| Conference Objectives:
                     <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DESDI'26 seeks to:
                 </p>
                 <p align="justify">
-                    
+
                     • Promote interdisciplinary research bridging business, economics, and applied technology<br>
                     • Explore the impact of data-driven innovation on digital transformation and competitiveness<br>
-                    • Highlight real-world applications of AI, analytics, and smart technologies in business ecosystems<br>
-                    • Provide an international networking platform connecting academia, industry, and policy institutions<br>
+                    • Highlight real-world applications of AI, analytics, and smart technologies in business
+                    ecosystems<br>
+                    • Provide an international networking platform connecting academia, industry, and policy
+                    institutions<br>
                     • Disseminate actionable insights that foster sustainable and inclusive digital growth
                 </p>
             </div>
         </div>
 
         <div class="clearfix"></div>
+
+        <div class="row-fluid top25">
+
+            <div class="panel1">
+                <div class="span11">
+                    <h4 class="top0"><strong> Publication </strong></h4>
+                    <p><span class="top0"><img src="img/logo/lgo.jpg" width="150" height="50" align="left"
+                                hspace="10"></span><strong>
+                                    Submitted paper will be peer reviewed by conference committees. The accepted paper will be
+                            included into:
+                                </strong></p>
+                    
+                    <p>
+                        - Springer Proceedings in Business and Economics <span style="color: coral;">
+                            (pending)</span><br>
+                        - Special Issue: International Journal of Intelligent Management
+                         and Data Systems <span style="color: green;">(confirmed)</span>
+                        <br>
+                        - Special Issue: The International Journal of Economic
+                         and Management Decisions <span style="color: green;">(confirmed)</span>
+
+                    </p>
+
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
     </div>
+
+
 
     <div class="span3">
         <div class="titleborder">
@@ -40,8 +81,10 @@
         <div class="accordion">
             <p>
                 <strong>
-                    <img src="{{ asset('img/logo/hot.gif') }}" width="20" height="20"> Paper/Abstract Submission Start Date: <br>
-                    <span class="post-edit-link">October 31, 2025</span><span class="STYLE3"><br></span><span class="STYLE4"><br></span>
+                    <img src="{{ asset('img/logo/hot.gif') }}" width="20" height="20"> Paper/Abstract Submission
+                    Start Date: <br>
+                    <span class="post-edit-link">October 31, 2025</span><span class="STYLE3"><br></span><span
+                        class="STYLE4"><br></span>
                     Paper/Abstract submission deadline: <br>
                     <span class="STYLE3">December 31, 2025</span><br><br>
                     Notification of acceptance: <br>
@@ -53,10 +96,12 @@
                 </strong>
             </p>
             <p>&nbsp;</p>
-            <p>
-                <span class="top0"><img src="{{ asset('img/logo/news.gif') }}" width="22" height="14"></span> Publication:<br>
-                Accepted and presented papers will be published in the Springer Proceedings in Business and Economics (SPBE) and submitted for indexing in Scopus and Web of Science.
-            </p>
+            <!-- <p>
+                <span class="top0"><img src="{{ asset('img/logo/news.gif') }}" width="22" height="14"></span>
+                Publication:<br>
+                Accepted and presented papers will be published in the Springer Proceedings in Business and Economics
+                (SPBE) and submitted for indexing in Scopus and Web of Science.
+            </p> -->
         </div>
     </div>
 </div>

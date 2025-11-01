@@ -1,7 +1,7 @@
 # DESDI 2025 Website Cleanup and Bootstrap Migration
 
 ## Overview
-This document summarizes the cleanup and migration of the conference website from ICFT/ICCIP to DESDI 2025, including the removal of non-functional elements and conversion to Bootstrap.
+This document summarizes the cleanup and migration of the conference website from ICFT/DESDI to DESDI 2025, including the removal of non-functional elements and conversion to Bootstrap.
 
 ## Pages Updated and Cleaned
 
@@ -79,7 +79,7 @@ This document summarizes the cleanup and migration of the conference website fro
 - ❌ Non-functional "Keynote Speakers" dropdown
 
 ### Content Elements
-- ❌ ICFT/ICCIP specific content
+- ❌ ICFT/DESDI specific content
 - ❌ Placeholder content ("Content coming soon")
 - ❌ Broken links and references
 - ❌ Irrelevant historical information
@@ -108,7 +108,7 @@ This document summarizes the cleanup and migration of the conference website fro
 ## Content Updates
 
 ### Conference Information
-- ✅ Updated all references from ICFT/ICCIP to DESDI 2025
+- ✅ Updated all references from ICFT/DESDI to DESDI 2025
 - ✅ Updated dates: October 23-24, 2025
 - ✅ Updated location: Morocco
 - ✅ Updated contact: desdi25@desdi.org
